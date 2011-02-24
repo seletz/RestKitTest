@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+#import <RestKit/RestKit.h>
+
 @interface RestKitTestAppDelegate : NSObject <UIApplicationDelegate> {
     
     UIWindow *window;

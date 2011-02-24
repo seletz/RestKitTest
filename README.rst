@@ -46,6 +46,37 @@ This is basic boilerplate setup:
     seletz@QuickBrett: RestKitTest $ mkdir Libraries
     seletz@QuickBrett: RestKitTest $ git submodule add https://github.com/twotoasters/RestKit.git Libraries/RestKit
 
+- Add RestKit to the Project:
+
+  - Open the Libraies folder in finder
+  - drag the `RestKit.xcodeproj` to the 'Groups & Files' pane in XCode
+  - while the RestKit project is selected, check all Frameworks needed (all
+    except Three20 and SBJSON)
+  - Edit the target's build setting and
+    - add RestKit as direct dependency in the 'General' tab
+    - add Missing frameworks to the 'Linked Libraries' List in the
+      'General' tab::
+
+      CFNetwork.framework
+      MobileCoreServices.framework
+      SystemConfiguration.framework
+
+    - Add to the 'Other Linker Flags'::
+
+      -all_load
+      -ObjC
+
+
+   - Add to the 'Framework Search Paths' **and** 'Header Search Paths'::
+
+      Libraries/RestKit/build
+
+Now, add in the App Delegate::
+
+  #import <RestKit/Restkit.h>
+
+The Project schould build and run with no errors.
+
 
 Links
 =====
