@@ -254,7 +254,8 @@ ourself as a delegate, the delegate methods so far do nothing but log::
         NSLog(@"Hit error: %@", error);
     }
 
-Running the App at this stage yields the following console output::
+Running the App at this stage yields the following console output (remember
+to serve the files locally in the htdocs directory!)::
 
     2011-02-24 12:09:57.336 RestKitTest[17064:207] Sending GET request to URL http://127.0.0.1:8000/projects.json. HTTP Body: 
     2011-02-24 12:09:57.382 RestKitTest[17064:207] objectLoader:didLoadObjects:
@@ -274,6 +275,12 @@ A few observations so far:
 
 - the 'text' property is empty.  This is because our 'projects.json' does
   not contain them.
+
+- There are nice error 'UIAlertViews' if something bad happens.  For
+  instance, the first time the app runs, it's most likely that the backing
+  store does not match the entity definitions of your '.xcdatamodel'.  In
+  such a case, one needs to reset the simulator.  In the real world we'd
+  need to migrate the database schema.
 
 Links
 =====
