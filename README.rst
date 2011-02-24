@@ -31,6 +31,22 @@ Non-Goals
 - no server code.  I'll use a fabricated JSON file.
 - no delete/update
 
+Project Setup
+=============
+
+This is basic boilerplate setup:
+
+- create a new XCode project:
+
+  - 'navigation based'
+  - 'use CoreData for storage'
+
+- Add RestKit as a git submodule::
+
+    seletz@QuickBrett: RestKitTest $ mkdir Libraries
+    seletz@QuickBrett: RestKitTest $ git submodule add https://github.com/twotoasters/RestKit.git Libraries/RestKit
+
+
 Links
 =====
 

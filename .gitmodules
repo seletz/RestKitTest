@@ -1,0 +1,3 @@
+[submodule "Libraries/RestKit"]
+	path = Libraries/RestKit
+	url = https://github.com/twotoasters/RestKit.git
