@@ -131,14 +131,23 @@ And each **project** (singular!) looks like::
 
 That **should** be enough for now.
 
+Project Model
+=============
+
+Code cleanup
+------------
+
+As we're going to use RestKit, we'll just remove the CoreData stack setup
+from the XCode template.  I just cleared every reference to NSManagedObject
+etc from the  AppDelegate and RootViewController.
+
 CoreData model
-==============
+--------------
 
 As already mentioned above, I want a CoreData backing store.  So let's
 model the entities. **note: atm we only have one entity**
 
 .. image:: https://github.com/seletz/RestKitTest/raw/master/images/project-model-1.png
-   
 
 
 Links
