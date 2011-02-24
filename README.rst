@@ -49,11 +49,15 @@ This is basic boilerplate setup:
 - Add RestKit to the Project:
 
   - Open the Libraies folder in finder
+
   - drag the `RestKit.xcodeproj` to the 'Groups & Files' pane in XCode
-  - while the RestKit project is selected, check all Frameworks needed (all
-    except Three20 and SBJSON)
+
+  - while the RestKit project is selected, check all Frameworks needed (all except Three20 and SBJSON)
+
   - Edit the target's build setting and
+
     - add RestKit as direct dependency in the 'General' tab
+
     - add Missing frameworks to the 'Linked Libraries' List in the 'General' tab::
 
       CFNetwork.framework
