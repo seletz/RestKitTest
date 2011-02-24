@@ -54,8 +54,7 @@ This is basic boilerplate setup:
     except Three20 and SBJSON)
   - Edit the target's build setting and
     - add RestKit as direct dependency in the 'General' tab
-    - add Missing frameworks to the 'Linked Libraries' List in the
-      'General' tab::
+    - add Missing frameworks to the 'Linked Libraries' List in the 'General' tab::
 
       CFNetwork.framework
       MobileCoreServices.framework
@@ -67,7 +66,7 @@ This is basic boilerplate setup:
       -ObjC
 
 
-   - Add to the 'Framework Search Paths' **and** 'Header Search Paths'::
+    - Add to the 'Framework Search Paths' **and** 'Header Search Paths'::
 
       Libraries/RestKit/build
 
