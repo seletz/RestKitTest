@@ -7,17 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 
 
-@interface ProjectModel : NSObject {
+@interface ProjectModel : RKObject {
 	
-	NSInteger * _identifier;
+	NSNumber * _identifier;
 	NSString  * _name;
 	NSString  * _text;
 }
 
-@property (nonatomic, assign) NSInteger *identifier;
+@property (nonatomic, retain) NSNumber *identifier;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *text;
+
++ (NSDictionary*)elementToPropertyMappings;
+
+- (NSString *)description;
 
 @end

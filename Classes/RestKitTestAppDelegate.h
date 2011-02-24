@@ -11,7 +11,7 @@
 
 #import <RestKit/RestKit.h>
 
-@interface RestKitTestAppDelegate : NSObject <UIApplicationDelegate> {
+@interface RestKitTestAppDelegate : NSObject <UIApplicationDelegate, RKObjectLoaderDelegate> {
     
     UIWindow *window;
     UINavigationController *navigationController;

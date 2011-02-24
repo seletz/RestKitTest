@@ -15,4 +15,17 @@
 @synthesize name = _name;
 @synthesize text = _text;
 
++ (NSDictionary*)elementToPropertyMappings {
+	return [NSDictionary dictionaryWithKeysAndObjects:
+			@"id", @"identifier",
+			@"name", @"name",
+			@"text", @"text",
+			nil];
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"<Project id=%@ name=%@ text=%@>", self.identifier, self.name, self.text];
+}
+
 @end

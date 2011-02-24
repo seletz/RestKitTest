@@ -6,8 +6,12 @@
 //  Copyright 2011 Nexiles GmbH. All rights reserved.
 //
 
+#import <RestKit/RestKit.h>
+
 #import "RestKitTestAppDelegate.h"
 #import "RootViewController.h"
+
+#import "ProjectModel.h"
 
 
 @implementation RestKitTestAppDelegate
@@ -15,19 +19,31 @@
 @synthesize window;
 @synthesize navigationController;
 
+#define BASE_URL @"http://127.0.0.1:8000"
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (void)awakeFromNib
-{    
+{   PersonModel 
     
     RootViewController *rootViewController = (RootViewController *)[navigationController topViewController];
 }
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{    
+    NSLog(@"application:didFinishLaunchingWithOptions: opts=%@", launchOptions);
+    // Initialize RestKit
+    RKObjectManager *objectManager = [RKObjectManager objectManagerWithBaseURL:BASE_URL];
+
+    // Initialize object store
+    objectManager.objectStore = [[[RKManagedObjectStore alloc] initWithStoreFilename:@"RestKitTest.sqlite"] autorelease];
+
+    [objectManager loadObjectsAtResourcePath:@"/projects.json"
+                                 objectClass:[ProjectModel class]
+                                    delegate:self];
+
     // Override point for customization after application launch.
 
     // Add the navigation controller's view to the window and display.
@@ -37,6 +53,25 @@
     return YES;
 }
 
+#pragma mark -
+#pragma mark RKObjectLoaderDelegate methods
+
+- (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects
+{
+    NSLog(@"objectLoader:didLoadObjects:");
+    NSLog(@"Loaded objects: %@", objects);
+}
+
+- (void)objectLoader:(RKObjectLoader*)objectLoader didFailWithError:(NSError*)error
+{
+    NSLog(@"objectLoader:didFailWithError:");
+    UIAlertView* alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
+    NSLog(@"Hit error: %@", error);
+}
+
+#pragma mark -
+#pragma mark Application Cycle
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
