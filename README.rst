@@ -12,6 +12,15 @@ Abstract
 These are my notes on getting a basic `RestKit` iPhone app going, which
 also uses CoreData as a cache on the iPhone.
 
+What I'm trying to build
+------------------------
+
+I'm trying to build a basic no-frills project/task/todo application, it
+seems fitting to me ;)
+
+The iPhone app will have a CoreData backing store, and I'll therefore have
+to model entities using XCode.  Oh well.
+
 Motivation
 ----------
 
@@ -121,6 +130,15 @@ And each **project** (singular!) looks like::
     }
 
 That **should** be enough for now.
+
+CoreData model
+==============
+
+As already mentioned above, I want a CoreData backing store.  So let's
+model the entities. **note: atm we only have one entity**
+
+.. image:: images/project-model-1.png
+   
 
 
 Links
