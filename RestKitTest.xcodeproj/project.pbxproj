@@ -25,6 +25,7 @@
 		BF1F59D013164FD400C0DB8F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1F59CF13164FD400C0DB8F /* CFNetwork.framework */; };
 		BF1F59D213164FD400C0DB8F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1F59D113164FD400C0DB8F /* MobileCoreServices.framework */; };
 		BF1F59D413164FD400C0DB8F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1F59D313164FD400C0DB8F /* SystemConfiguration.framework */; };
+		BF948D2B1316632F006CD04F /* ProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF948D2A1316632F006CD04F /* ProjectModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		BF1F59CF13164FD400C0DB8F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BF1F59D113164FD400C0DB8F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BF1F59D313164FD400C0DB8F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BF948D291316632F006CD04F /* ProjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectModel.h; sourceTree = "<group>"; };
+		BF948D2A1316632F006CD04F /* ProjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +144,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
-				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				BF948D2813166308006CD04F /* Controllers */,
+				BF948D2713166300006CD04F /* Models */,
 				1D3623240D0F684500981E51 /* RestKitTestAppDelegate.h */,
 				1D3623250D0F684500981E51 /* RestKitTestAppDelegate.m */,
 			);
@@ -217,6 +220,24 @@
 				BF1F59C113164E7A00C0DB8F /* UISpec.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BF948D2713166300006CD04F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF948D291316632F006CD04F /* ProjectModel.h */,
+				BF948D2A1316632F006CD04F /* ProjectModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BF948D2813166308006CD04F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +372,7 @@
 				1D3623260D0F684500981E51 /* RestKitTestAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				28D3F202112F7DC200FD0661 /* RestKitTest.xcdatamodeld in Sources */,
+				BF948D2B1316632F006CD04F /* ProjectModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

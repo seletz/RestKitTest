@@ -150,6 +150,12 @@ model the entities. **note: atm we only have one entity**
 .. image:: https://github.com/seletz/RestKitTest/raw/master/images/project-model-1.png
 
 
+Project model class
+-------------------
+   
+- create a new class, based on NSObject, called "Project".  I like to keep
+  these in a 'Models' group in XCode.
+
 Links
 =====
 
