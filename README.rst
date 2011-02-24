@@ -156,6 +156,18 @@ Project model class
 - create a new class, based on NSObject, called "Project".  I like to keep
   these in a 'Models' group in XCode.
 
+- I've added properties, and synthesized them.  I'll also adopt the
+  practice to prefix properties with an underscore, like so::
+
+    @implementation ProjectModel
+
+    @synthesize identifier = _identifier;
+    @synthesize name = _name;
+    @synthesize text = _text;
+
+    @end
+
+
 Links
 =====
 

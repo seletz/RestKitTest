@@ -11,4 +11,8 @@
 
 @implementation ProjectModel
 
+@synthesize identifier = _identifier;
+@synthesize name = _name;
+@synthesize text = _text;
+
 @end
