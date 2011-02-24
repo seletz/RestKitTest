@@ -137,7 +137,7 @@ CoreData model
 As already mentioned above, I want a CoreData backing store.  So let's
 model the entities. **note: atm we only have one entity**
 
-.. image:: images/project-model-1.png
+.. image:: https://github.com/seletz/RestKitTest/raw/master/images/project-model-1.png
    
 
 
