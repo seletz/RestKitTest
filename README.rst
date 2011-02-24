@@ -80,6 +80,48 @@ Now, add in the App Delegate::
 
 The Project schould build and run with no errors.
 
+Fake JSON data
+==============
+
+To get started with RestKit, I've created some fake JSON data in 'htdocs'::
+
+    seletz@QuickBrett: RestKitTest $ tree htdocs/
+    htdocs/
+    |-- project
+    |   |-- 1.json
+    |   |-- 2.json
+    |   `-- 3.json
+    `-- projects.json
+
+    1 directory, 4 files
+
+This can be served using::
+
+    seletz@QuickBrett: RestKitTest $ cd htdocs/
+    seletz@QuickBrett: htdocs $ python -mSimpleHTTPServer
+    Serving HTTP on 0.0.0.0 port 8000 ...
+
+The projects.json (plural, see?) collection looks like::
+
+    [
+    { "id": 1,
+      "name": "First Project"},
+    { "id": 2,
+      "name": "Second Project"},
+    { "id": 3,
+      "name": "Third Project"}
+    ]
+
+And each **project** (singular!) looks like::
+
+    {
+    "id": 1,
+    "name": "First Project",
+    "text": "Foobar frobnicates Whizbangs."
+    }
+
+That **should** be enough for now.
+
 
 Links
 =====
